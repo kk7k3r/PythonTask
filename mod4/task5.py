@@ -8,4 +8,5 @@ for i in range(len(f)):
         if (dict.get(f[i][j].lower()) == None):
             dict[f[i][j].lower()] = 1
         else: dict[f[i][j].lower()] += 1
-print(sorted(dict.items(), key=lambda item: item[1], reverse=True))
+res_file = open(path + "_result", "w")
+res_file.write(str(sorted(dict.items(), key=lambda item: item[1], reverse=True)))
